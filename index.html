@@ -7,56 +7,6 @@
     <title>Yeisi Estrada</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilo.css">
-    <style>
-        .banner {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .deporte-galeria {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .deporte-galeria img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-            display: block;
-        }
-
-        .producto {
-            text-align: center;
-        }
-
-        .precio {
-            font-size: 1.2em;
-            color: #333;
-        }
-
-        .btn-carrito {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #141414;
-            color: rgb(248, 241, 241);
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-carrito:hover {
-            background-color: #e01212;
-             color: rgb(252, 248, 248);
-        }
-    </style>
 </head>
 
 <body>
@@ -75,26 +25,50 @@
         </div>
     </header>
     <img class="banner" src="img/banner.jpg" alt="">
-    <div class="deporte-galeria">
-        <div class="producto">
-            <img src="img/zapa.jpg" alt="Zapatillas deportivas">
-            <h3>Zapatillas deportivas</h3>
-            <p class="precio">$4.500</p>
-            <a class="btn-carrito" href="carrito.html?producto=zapa">Agregar al carrito</a>
+    <main>
+        <div class="deporte-galeria">
+            <div class="producto">
+                <img src="img/zapa.jpg" alt="Zapatillas deportivas">
+                <h3>Zapatillas deportivas</h3>
+                <p class="precio">$4.500</p>
+                <a class="btn-carrito" href="carrito.html?producto=zapa">Agregar al carrito</a>
+            </div>
+            <div class="producto">
+                <img src="img/renera.jpg" alt="Remera deportiva">
+                <h3>Remera deportiva</h3>
+                <p class="precio">$2.800</p>
+                <a class="btn-carrito" href="carrito.html?producto=remera">Agregar al carrito</a>
+            </div>
+            <div class="producto">
+                <img src="img/shor.avif" alt="Short deportivo">
+                <h3>Short deportivo</h3>
+                <p class="precio">$2.200</p>
+                <a class="btn-carrito" href="carrito.html?producto=short">Agregar al carrito</a>
+            </div>
         </div>
-        <div class="producto">
-            <img src="img/renera.jpg" alt="Remera deportiva">
-            <h3>Remera deportiva</h3>
-            <p class="precio">$2.800</p>
-            <a class="btn-carrito" href="carrito.html?producto=remera">Agregar al carrito</a>
+    </main>
+    <footer class="footer">
+        <div class="footer-mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.803073624443!2d-58.44585668477044!3d-34.61421118045409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb7e2e2e2e2e%3A0x2e2e2e2e2e2e2e2e!2sParque%20Centenario!5e0!3m2!1ses!2sar!4v1660000000000!5m2!1ses!2sar"
+                width="180" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <div class="producto">
-            <img src="img/shor.avif" alt="Short deportivo">
-            <h3>Short deportivo</h3>
-            <p class="precio">$2.200</p>
-            <a class="btn-carrito" href="carrito.html?producto=short">Agregar al carrito</a>
+        <div class="footer-enlaces">
+            <h4>Enlaces útiles</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Remeras</a></li>
+                <li><a href="services.html">Zapatillas</a></li>
+                <li><a href="contact.html">Nosotros</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
         </div>
-    </div>
+        <div class="footer-redes">
+            <h4>Redes sociales</h4>
+            <a href="https://facebook.com" target="_blank">Facebook</a><br>
+            <a href="https://instagram.com" target="_blank">Instagram</a><br>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
 </body>
 
 </html>
