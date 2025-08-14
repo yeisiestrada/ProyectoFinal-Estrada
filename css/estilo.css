@@ -249,3 +249,15 @@ footer > div {
     background-color: #ff0e0e;
     color: rgb(252, 248, 248);
 }
+
+.nosotros-contenido {
+    display: flex;
+    align-items: center; /* Cambiado de flex-start a center */
+    gap: 24px;
+}
+
+.nosotros-contenido img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+}
