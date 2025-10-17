@@ -1,0 +1,6 @@
+
+2) Crear ZIP con todo [unidad7](http://_vscodecontentref_/2)
+```powershell
+# crea el ZIP (sobrescribe si ya existe)
+Compress-Archive -Path .\unidad7 -DestinationPath .\unidad7-entrega.zip -Force
+Write-Host "ZIP creado: .\unidad7-entrega.zip"
