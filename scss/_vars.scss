@@ -1,0 +1,18 @@
+
+// 🎨 Variables globales de color
+$color-primary: #ff0e0e;
+$color-secondary: #000;
+$color-white: #ffffff;
+$color-gray-light: #f7f7f7;
+$color-accent: #7a7a7a;
+
+// 💬 Tipografía
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Oswald', Arial, sans-serif;
+
+// 📱 Breakpoints
+$breakpoints: (
+  sm: 600px,
+  md: 900px,
+  lg: 1100px
+);

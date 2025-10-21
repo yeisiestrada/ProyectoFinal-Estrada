@@ -1,0 +1,26 @@
+@use 'vars';
+
+// Mixin para centrar con flex
+@mixin flex-center($dir: row, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+// Mixin para aplicar sombra
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  } @else if $level == 2 {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Mixin para media queries
+@mixin respond($size) {
+  @media (max-width: map-get(vars.$breakpoints, $size)) {
+    @content;
+  }
+}

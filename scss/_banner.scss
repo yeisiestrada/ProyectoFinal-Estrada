@@ -1,0 +1,14 @@
+@use 'vars';
+@use 'mixins';
+
+/* =========================
+   BANNER
+   ========================= */
+
+.banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}

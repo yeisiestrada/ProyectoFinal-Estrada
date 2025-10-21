@@ -1,0 +1,141 @@
+@use 'vars';
+@use 'mixins';
+
+/* =========================
+   CATÁLOGO Y PRODUCTOS
+   ========================= */
+
+.catalogo-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin: 40px 0;
+}
+
+.producto {
+  background: vars.$color-white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 18px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.1rem;
+    margin: 8px 0 4px 0;
+  }
+}
+
+.precio {
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.btn-carrito {
+  display: inline-block;
+  background: #222;
+  color: vars.$color-white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 8px;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background: vars.$color-primary;
+    color: vars.$color-white;
+  }
+}
+
+/* =========================
+   GALERÍA DE DEPORTES
+   ========================= */
+
+.deporte-galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+  }
+}
+
+/* =========================
+   EXTENSIÓN DE COMPONENTES
+   ========================= */
+
+/* Ejemplo: Producto destacado */
+
+.producto {
+  &.destacado {
+    border: 2px solid var(--color-secundario);
+    background: vars.$color-white
+  }
+
+  &.agotado {
+    opacity: 0.6;
+    pointer-events: none;
+    position: relative;
+
+    &::after {
+      content: "AGOTADO";
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--color-secundario);
+      color: vars.$color-white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+  }
+}
+
+.catalogo-galeria {
+  &.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
