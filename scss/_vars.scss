@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 // 🎨 Variables globales de color
 $color-primary: #ff0e0e;
@@ -9,8 +11,28 @@ $color-black: #222;
 $color-verde: #1a8917;
 
 // 💬 Tipografía
-$font-primary: 'Montserrat', sans-serif;
-$font-secondary: 'Oswald', Arial, sans-serif;
+$font-primary: "Lato", sans-serif;
+$font-secondary: "BBH Sans Bogle", sans-serif;
+
+.bogle-regular {
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 
 // 📱 Breakpoints
 $breakpoints: (
