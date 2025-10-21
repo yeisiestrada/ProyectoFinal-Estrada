@@ -377,6 +377,7 @@ footer > div {
   text-align: right;
   box-sizing: border-box;
   margin: 0;
+  width: max-content;
 }
 .footer-enlaces ul li a:hover {
   background: #ff0e0e;
@@ -389,6 +390,12 @@ footer > div {
   flex-direction: column;
   align-items: flex-end;
   gap: 8px;
+}
+.footer-redes .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
 }
 .footer-redes h4 {
   text-align: right;
@@ -403,6 +410,7 @@ footer > div {
   transition: background 0.2s, color 0.2s;
   display: inline-block;
   text-align: right;
+  width: max-content;
 }
 .footer-redes a:hover {
   background: #ff0e0e;
@@ -565,13 +573,13 @@ p {
    ========================= */
 /* Paleta de colores fácil de modificar */
 :root {
-  --color-principal:
-    --color-secundario:vars.$color-primary;
-  --color-acento: #1a8917;
+  --color-principal: vars.$color-primary;
+  --color-secundario: vars.$color-secondary;
+  --color-acento: vars.$color-verde;
   --color-fondo: vars.$color-white;
   --color-blanco: vars.$color-white;
   --color-gris: vars.$color-gray-light;
-  --color-negro: #000;
+  --color-negro: vars.$color-secondary;
 }
 
 /* Espaciados */
@@ -690,9 +698,6 @@ p {
   background: var(--color-acento) !important;
 }
 
-/* =========================
-   FIN DE UTILITARIOS Y EXTENSIONES
-   ========================= */
 /* =========================
 FIN DE UTILITARIOS Y EXTENSIONES
 ========================= */
