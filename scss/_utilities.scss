@@ -147,3 +147,10 @@ FIN DE UTILITARIOS Y EXTENSIONES
   gap: 16px;
   align-items: center;
 }
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: vars.$color-primary;
+  display: inline-block;
+}

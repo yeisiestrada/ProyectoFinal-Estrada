@@ -5,6 +5,7 @@
   font-family: "BBH Sans Bogle", sans-serif;
   font-weight: 400;
   font-style: normal;
+  letter-spacing: 2px;
 }
 
 .lato-regular {
@@ -775,6 +776,13 @@ FIN DE UTILITARIOS Y EXTENSIONES
   display: flex;
   gap: 16px;
   align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff0e0e;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=estilo.css.map */
