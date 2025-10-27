@@ -1,0 +1,86 @@
+// =========================
+// ICONOS DE REDES SOCIALES
+// =========================
+@use "../base/vars" as *;
+@use "../base/mixins" as *;
+
+@each $name, $props in $socials {
+  $bg: map-get($props, color);
+  $content: map-get($props, content);
+
+  .social-#{$name} {
+    @include social-base;
+    
+    @if type-of($bg) == 'string' and str-index($bg, "linear-gradient") {
+      background: unquote($bg);
+      color: #fff;
+    } @else {
+      background: $bg;
+      @if (lightness($bg) > 80) { color: #000; }
+    }
+
+    &::after {
+      content: "#{$content}";
+      font-size: ($icon-size * 0.46);
+      display: block;
+      line-height: 1;
+    }
+  }
+}
+
+.social--rounded { border-radius: 999px; }
+.social--small { @include social-base($size: 36px, $radius: 9px); }
+.social--ghost {
+  background: transparent !important;
+  border: 2px solid rgba(0,0,0,0.08);
+  color: inherit;
+  box-shadow: none;
+  &::after { color: inherit; }
+}
+.social--ghost:hover {
+  background: rgba(0,0,0,0.04) !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+.social-links {
+  display: flex;
+  gap: 12px; // espacio entre íconos
+}
+
+.social--ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+
+  img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease;
+  }
+
+  &:hover {
+    background-color: #0077b5; // Cambia según la red social si quieres
+    border-color: #0077b5;
+
+    img {
+      filter: brightness(0) invert(1); // icono blanco
+    }
+  }
+}
+@keyframes instagram-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

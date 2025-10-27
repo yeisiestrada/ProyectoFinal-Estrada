@@ -477,14 +477,22 @@ footer > div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 1px;
 }
 .footer-redes .social-links {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 5px;
+  flex-direction: row; 
+  justify-content: flex-end;
+  gap: 1px; 
+  
 }
+.social-icon {
+    width: 35px;   
+    height: 35px;  
+}
+
+
+
 .footer-redes h4 {
   text-align: right;
 }
@@ -499,6 +507,8 @@ footer > div {
   display: inline-block;
   text-align: right;
   width: max-content;
+  
+
 }
 .footer-redes a:hover {
   background: #ff0e0e;
@@ -802,3 +812,4 @@ FIN DE UTILITARIOS Y EXTENSIONES
 }
 
 /*# sourceMappingURL=estilo.css.map */
+

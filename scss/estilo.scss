@@ -1,11 +1,15 @@
-@use 'vars';
-@use 'mixins';
-@use 'reset';
-@use 'header';
-@use 'banner';
-@use 'catalogo';
-@use 'formulario';
-@use 'footer';
-@use 'mediaqueries';
-@use 'base';
-@use 'utilities';
+// =========================
+// ARCHIVO PRINCIPAL SCSS
+// =========================
+@use 'base/vars';
+@use 'base/mixins';
+@use 'base/reset';
+@use 'layout/header';
+@use 'layout/banner';
+@use 'layout/catalogo';
+@use 'layout/formulario';
+@use 'layout/footer';
+@use 'utils/mediaqueries';
+@use 'base/base';
+@use 'utils/utilities';
+@use 'components/social-icons';

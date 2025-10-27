@@ -1,0 +1,117 @@
+@use 'vars';
+@use 'mixins';
+
+/* =========================
+   HEADER Y NAVEGACIÓN
+   ========================= */
+
+header {
+  background-color: vars.$color-secondary;
+
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  img {
+    margin: 20px;
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+    li a {
+      color: vars.$color-white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: vars.$color-primary;
+        transition: width 0.3s;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.main-banner {
+  position: relative;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: vars.$color-white;
+  text-align: center;
+
+  .texto {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 6.5rem;
+    margin: 0;
+    z-index: 2;
+    letter-spacing: 4px;
+
+    span {
+      color: vars.$color-primary;
+    }
+  }
+
+  p {
+    font-size: 2.2rem;
+    font-family: vars.$font-secondary;
+    margin: 10px 0 0;
+    z-index: 2;
+  }
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/banner.jpg') center/cover no-repeat;
+    z-index: 0;
+  }
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+}
