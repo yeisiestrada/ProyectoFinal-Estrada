@@ -59,7 +59,7 @@ footer {
 .footer-redes h4 {
   margin-bottom: 10px;
   font-size: 1.1rem;
-  color: vars.$color-white;
+  color: vars.$color-black;
 }
 
 .footer-enlaces ul {
@@ -103,7 +103,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 1px;
 
   .social-links {
     display: flex;
