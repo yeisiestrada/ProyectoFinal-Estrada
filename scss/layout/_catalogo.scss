@@ -16,7 +16,7 @@
   background: vars.$color-white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 18px;
+  padding: 16px;
   text-align: center;
   transition: box-shadow 0.2s;
   display: flex;
@@ -28,11 +28,11 @@
   }
 
   img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 12px;
+    border-radius: 7px;
+    margin-bottom: 11px;
   }
 
   h2,
@@ -51,7 +51,7 @@
 
 .btn-carrito {
   display: inline-block;
-  background: #222;
+  background: vars.$color-black;
   color: vars.$color-white;
   padding: 10px 20px;
   border-radius: 6px;
