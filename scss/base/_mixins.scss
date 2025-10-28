@@ -1,0 +1,75 @@
+@use 'vars';
+
+// Mixin para centrar con flex
+@mixin flex-center($dir: row, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+// Mixin para aplicar sombra
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  } @else if $level == 2 {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Mixin para media queries
+@mixin respond($size) {
+  @media (max-width: map-get(vars.$breakpoints, $size)) {
+    @content;
+  }
+}
+// =========================
+// MIXINS
+// =========================
+@mixin social-base($size: $icon-size, $radius: $border-radius) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+  border-radius: $radius;
+  color: vars.$color-white;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  box-shadow: $shadow;
+  transition: transform $transition-time ease, box-shadow $transition-time ease;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+  user-select: none;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  }
+  &:active { transform: translateY(-1px) scale(0.995); }
+}
+
+@mixin social-icon($platform) {
+  $social: map-get(vars.$socials, $platform);
+  $color: map-get($social, color);
+  $content: map-get($social, content);
+
+  @include social-base();
+
+  @if $platform == instagram {
+    background: $color;
+    background-size: 200% 200%;
+    animation: instagram-gradient 3s ease infinite;
+  } @else {
+    background-color: $color;
+  }
+
+  &::before {
+    content: $content;
+    font-size: 24px;
+  }
+}
+

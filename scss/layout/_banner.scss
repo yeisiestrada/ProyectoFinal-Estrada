@@ -1,0 +1,24 @@
+@use 'vars';
+@use 'mixins';
+
+/* =========================
+   BANNER
+   ========================= */
+
+.banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 300px;
+  background: url('../img/banner.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$color-white;
+  font-size: 2rem;
+}

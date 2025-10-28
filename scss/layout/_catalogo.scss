@@ -1,0 +1,218 @@
+@use 'vars';
+@use 'mixins';
+
+/* =========================
+   CATÁLOGO Y PRODUCTOS
+   ========================= */
+
+.catalogo-galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin: 40px 0;
+}
+
+.producto {
+  background: vars.$color-white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 18px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.1rem;
+    margin: 8px 0 4px 0;
+  }
+}
+
+.precio {
+  color: vars.$color-secondary;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.btn-carrito {
+  display: inline-block;
+  background: #222;
+  color: vars.$color-white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 8px;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background: vars.$color-primary;
+    color: vars.$color-white;
+  }
+}
+
+/* =========================
+   GALERÍA DE DEPORTES
+   ========================= */
+
+.deporte-galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+  }
+
+  a {
+
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: vars.$color-primary;
+      transition: width 0.3s;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+/* =========================
+   EXTENSIÓN DE COMPONENTES
+   ========================= */
+
+/* Ejemplo: Producto destacado */
+
+.producto {
+  &.destacado {
+    border: 2px solid var(--color-secundario);
+    background: vars.$color-white
+  }
+
+  &.agotado {
+    opacity: 0.6;
+    pointer-events: none;
+    position: relative;
+
+    &::after {
+      content: "AGOTADO";
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--color-secundario);
+      color: vars.$color-white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+  }
+}
+
+.catalogo-galeria {
+  &.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+// =========================
+// CATÁLOGO
+// =========================
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.producto {
+  background: vars.$color-white;
+  border: 1px solid vars.$color-border;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    @include mixins.shadow(1);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: vars.$color-accent;
+  }
+
+  .precio {
+    font-size: 1.1rem;
+    color: vars.$color-primary;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .btn-carrito {
+    background: vars.$color-primary;
+    color: vars.$color-white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:hover {
+      background: darken(vars.$color-primary, 10%);
+    }
+  }
+}
