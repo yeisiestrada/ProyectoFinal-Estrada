@@ -1,0 +1,15 @@
+// =========================
+// ARCHIVO PRINCIPAL 
+// =========================
+@use 'base/vars';
+@use 'base/mixins';
+@use 'base/reset';
+@use 'layout/header';
+@use 'layout/banner';
+@use 'layout/catalogo';
+@use 'layout/formulario';
+@use 'layout/footer';
+@use 'utils/mediaqueries';
+@use 'base/base';
+@use 'utils/utilities';
+@use 'components/social-icons';
