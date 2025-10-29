@@ -60,7 +60,7 @@
   @include social-base();
 
   @if $platform == instagram {
-    background: $color;
+    background: $color; 
     background-size: 200% 200%;
     animation: instagram-gradient 3s ease infinite;
   } @else {
